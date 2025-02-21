@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    background-image: url(galaxy.jpg);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+}
+
+.container {
+    font-size: 10px;
+    width: 40em;
+    height: 40em;
+    position: relative;
+}
+
+.sun {
+    position: absolute;
+    top: 15em;
+    left: 15em;
+    width: 15em;
+    height: 15em;
+    border-radius: 50%;
+    color: red;
+    background-image: url(Sun.png);
+   background-position: center;
+    box-shadow: 0 0 7em rgb(206, 176, 10);
+}
+
+.earth {
+    position: relative;
+    width: 9em;
+    height: 9em;
+    border-radius: 50%;
+    animation: orbit 36.5linear infinite;
+    border: none;
+    animation: orbit-earth 36.5s linear infinite;
+    background-image: url(Earth.png);
+    background-position: center;
+   
+}
+
+
+
+.earth:after {
+
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    top: 2.8em;
+    right: 2.8em;
+    height: 3em;
+    width: 3em;
+    background-image: url(moon.png);
+   background-position: center;
+    animation: orbit-moon 2.7s linear infinite;
+}
+
+@keyframes orbit-earth {
+    from {
+        transform: rotate(0deg) translateX(220px) rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg) translateX(220px) rotate(-360deg);
+    }
+}
+
+@keyframes orbit-moon {
+    from {
+        transform: rotate(0deg) translateX(75px) rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg) translateX(75px) rotate(-360deg);
+    }
+}

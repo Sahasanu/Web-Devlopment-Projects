@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="utility.css">
+    <style>
+        .playbar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            margin: 0;
+            width: 100%;
+            padding: 0;
+            height: 5vh;
+            background: #000000;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            gap: 1%;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+            z-index: 10;
+        }
+
+        .playbar .trackinfo {
+            width: 33%;
+            margin-left: 0;
+            display: flex;
+            gap: 10px;
+        }
+
+        .playbar .trackinfo p {
+            margin: 0;
+            font-size: 14px;
+            flex: 1;
+        }
+
+        .playbar .controls-progress {
+            width: 33%;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .playbar .controls-progress .progress {
+            width: 100%;
+            border: 2px solid rgb(254, 252, 252);
+            flex: 1;
+        }
+
+        .playbar .controls-progress .controls img {
+            width: 20px;
+            margin: 0px 2px;
+            filter: invert(100%);
+        }
+
+        .playbar .volm-progress {
+            width: 20%;
+            display: flex;
+            margin-left: 3vw;
+            gap: 10px;
+        }
+
+        .playbar .volm-progress .volm {
+            width: 80%
+        }
+    </style>
+</head>
+
+<body>
+    <div class="playbar">
+        <div class="trackinfo">
+            <img class="invert" src="Images/music.png" width="10px" alt="">
+            <div class="info">
+                <p>Song Name</p>
+                <p>Artist</p>
+            </div>
+        </div>
+        <div class="controls-progress">
+            <div class="progress"></div>
+            <div class="controls ">
+                <img src="Images/prevsong.png" alt="">
+                <img src="Images/play.png" alt="">
+                <img src="Images/pause.png" alt="">
+                <img src="Images/nextsong.png" alt="">
+            </div>
+        </div>
+        <div class="volm-progress ">
+            <img class="invert" src="Images/volume.png" alt="">
+            <div class="volm"></div>
+        </div>
+
+    </div>
+</body>
+
+</html>

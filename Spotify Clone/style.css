@@ -1,0 +1,771 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+body {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    color: white;
+    font-family: "Open Sans", serif;
+}
+
+nav {
+    display: flex;
+    width: 100%;
+    height: 7vh;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    /* border: 2px solid red; */
+}
+
+nav .navleft {
+    display: flex;
+    width: 45%;
+    height: 100%;
+    align-items: center;
+    margin-top: -4px;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+nav .navleft .hmlogo {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 9vw;
+    padding-top: 0;
+}
+
+nav .navleft .hmlogo img {
+    margin-left: 1vw;
+}
+
+nav .navleft .hmlogo button {
+    margin-left: 1.2vw;
+    width: 3vw;
+    height: 3vw;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    padding: 0;
+    background-color: rgb(54, 55, 55);
+}
+
+nav .navleft .hmlogo button img {
+    width: 20px;
+    margin-left: 0;
+    filter: invert(100%);
+}
+
+nav .navleft .hmlogo button:hover {
+    filter: brightness(150%);
+}
+
+nav .navleft .srch {
+    border-radius: 50px;
+    width: 70%;
+    margin-top: 0;
+    height: 90%;
+    display: flex;
+    padding-left: 2px;
+    padding-right: 2px;
+    align-items: center;
+    background-color: #2A2A2A;
+}
+
+nav .navleft .srch #search {
+    width: 22px;
+    margin-left: 10px;
+    filter: invert(100%);
+    cursor: pointer;
+}
+
+nav .srch input {
+    margin-left: 2%;
+    border: none;
+    border-right: 1px solid rgb(185, 181, 181);
+    width: 80%;
+    height: 60%;
+    text-decoration: none;
+    outline: none;
+    font-size: 14px;
+    background: transparent;
+    color: white;
+}
+
+nav .navleft .srch input:hover {
+    background-color: inherit;
+    border-color: inherit;
+    box-shadow: none;
+}
+
+nav .navleft .srch #folder {
+    width: 25px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+nav .navleft .srch:hover {
+    border: 2px solid white;
+    background-color: #282828;
+    box-shadow: #a7a6a6 inset;
+    filter: brightness(120%);
+}
+
+.opts {
+    margin-right: auto;
+}
+
+nav .navright {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    margin-left: 18vw;
+    width: 40%;
+    height: 90%;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+nav .navright .opts {
+    border-right: 1px solid rgb(244, 247, 244);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 50%;
+    height: 50%;
+    padding-right: 10px;
+    margin-right: 0;
+}
+
+nav .navright .opts a {
+    text-decoration: none;
+    color: #ccc9c9;
+    font-weight: bolder;
+    font-size: 17px;
+}
+
+nav .navright .opts a:hover {
+    filter: brightness(150%);
+}
+
+nav .navright .log {
+    display: flex;
+    width: 60%;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 2px;
+    font-weight: 550;
+    font-size: 15px;
+    padding-left: 1vw;
+    color: #c4bebe;
+}
+
+nav .navright .log #install {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #a7a6a6;
+    border: none;
+    background-color: transparent;
+    width: 7vw;
+}
+
+nav .navright .log #install img {
+    filter: invert(100%);
+    width: 34px;
+}
+
+nav .navright .log #install img:hover {
+    filter: brightness(150%);
+    filter: invert(100%);
+}
+
+nav .navright .log #sign {
+    text-decoration: none;
+    color: #a7a6a6;
+}
+
+nav .navright .log #sign:hover,
+nav .navright .log #install:hover {
+    filter: brightness(150%);
+}
+
+nav .navright .log #log {
+    background-color: white;
+    height: 100%;
+    width: 7vw;
+    border-radius: 30px;
+    color: black;
+    font-weight: 700;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+nav .navright .log #log:hover {
+    background-color: rgb(220, 217, 217);
+}
+
+.playbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    width: 100%;
+    padding: 0;
+    height: 5vh;
+    background: #f9f7f7;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    gap: 1%;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+
+.playbar .trackinfo {
+    width: 33%;
+    margin-left: 0;
+    display: flex;
+    gap: 15px;
+    color: black;
+}
+
+.playbar .trackinfo p {
+    margin: 0;
+    font-size: 14px;
+    flex: 1;
+}
+
+.playbar .controls-progress {
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.playbar .controls-progress .progress {
+    width: 100%;
+    border: 1px solid rgb(14, 12, 12);
+    height: 2px;
+    /* background-color: black; */
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.playbar .circle {
+    width: 10px;
+    height: 10px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 50%;
+
+}
+
+.playbar .width {
+    width: 0%;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+    border-radius: 50%;
+
+}
+
+.playbar .controls-progress .controls img {
+    width: 20px;
+    margin: 0px 2px;
+    filter: invert(100%);
+}
+
+.playbar .duration {
+    margin-left: 2vw;
+    font-weight: 200;
+}
+
+.playbar .volm-progress {
+    width: 20%;
+    display: flex;
+    align-items: center;
+    margin-left: 5vw;
+    gap: 10px;
+    /* border: 2px solid red; */
+}
+
+.playbar .volm-progress .img img {
+    width: 20px;
+}
+
+.playbar .volm-progress .volm {
+    display: flex;
+    height: 100%;
+}
+
+.playbar .volm-progress .volm input {
+    -webkit-appearance: none;
+    width: 50%;
+    height: 5px;
+    background: black;
+    border-radius: 5px;
+    outline: none;
+    transition: 0.2s ease-in-out;
+}
+
+/* .playbar .volm-progress .volm input:hover {
+    background: linear-gradient(to right, #ff4757, #ff6b81);
+} */
+
+.playbar .volm-progress .volm input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    border: 2px solid #000000;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+
+.playbar .volm-progress .volm .volm-circle {
+    width: 10px;
+    height: 10px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 50%;
+}
+
+main .portions {
+    display: flex;
+    height: calc(100% - 7vh);
+    /* margin-top: 10px; */
+    padding: 0px 10px;
+}
+
+main .leftportion {
+    position: fixed;
+    top: 9vh;
+    margin-top: 4px;
+    /* left: 0; */
+    width: 27%;
+    height: calc(100vh - 13vh);
+    border-radius: 5px;
+    background-color: #121212;
+    padding-bottom: 10px;
+}
+
+
+
+main .leftportion .heading {
+    display: flex;
+    padding: 2vh 1vw;
+    justify-content: space-between;
+    align-items: center;
+    color: gray;
+    font-weight: 800;
+}
+
+main .leftportion .heading #icon {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+main .leftportion .heading #icon img {
+    width: 30px;
+}
+
+main .leftportion .heading button {
+    font-size: 30px;
+    background-color: transparent;
+    border: none;
+    color: grey;
+    font: 200;
+}
+
+main .leftportion .sidebar-content {
+    flex: 1;
+    height: 60%;
+    width: 100%;
+    overflow-y: auto;
+    /* "auto" instead of "scroll" to show scrollbar only when needed */
+    padding: 10px 5px;
+    margin-top: 1vh;
+    box-sizing: border-box;
+    /* Ensures padding/borders don't push content */
+}
+
+/* Scrollbar styles */
+main .leftportion .sidebar-content::-webkit-scrollbar {
+    width: 5px;
+    /* Slightly increase width for better visibility */
+}
+
+main .leftportion .sidebar-content::-webkit-scrollbar-thumb {
+    background-color: rgb(35, 34, 34);
+    border-radius: 10px;
+}
+
+
+main .leftportion .sidebar-content .box {
+    background-color: #222;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    border-radius: 8px;
+    margin-bottom: 4vh;
+}
+
+main .leftportion .sidebar-content .box h3 {
+    margin-top: 2vh;
+    margin-left: 1vw;
+    margin-bottom: 0;
+}
+
+main .leftportion .sidebar-content .box p {
+    margin-top: 10px;
+    margin-left: 1vw;
+    margin-bottom: 0;
+}
+
+main .leftportion .sidebar-content .box .btn {
+    background-color: white;
+    color: black;
+    border: none;
+    width: 8vw;
+    height: 4vh;
+    border-radius: 20px;
+    margin-top: 2.5vh;
+    margin-left: 1vw;
+    margin-bottom: 1.5vh;
+    cursor: pointer;
+    font-weight: bolder;
+    text-align: center;
+}
+
+main .leftportion .sidebar-content .songlist li {
+    display: flex;
+    width: 95%;
+    /* border: 2px solid red; */
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px auto;
+    padding: 0px 8px;
+    height: 4vh;
+    background-color: #1c1b1b47;
+}
+
+main .leftportion .sidebar-content .songlist .songinfo {
+    display: flex;
+    width: 80%;
+    gap: 15px;
+    align-items: center;
+}
+
+main .leftportion .sidebar-content .songlist .songinfo img {
+    width: 20px;
+}
+
+main .leftportion .sidebar-content .songlist .playnow {
+    display: flex;
+    align-items: center;
+}
+
+main .leftportion .sidebar-content .songlist .songinfo .info p {
+    margin: 0;
+    font-size: 10px;
+}
+
+main .leftportion .footer .sidebar-footer {
+    font-size: 12px;
+    display: flex;
+    margin-top: 2vh;
+    width: 70%;
+    margin-left: 20px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+main .leftportion .footer .sidebar-footer a {
+    color: gray;
+    text-decoration: none;
+    margin-bottom: 5px;
+    margin-left: 10px;
+}
+
+main .leftportion .language-btn {
+    background: none;
+    display: flex;
+    border: 1px solid white;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+    margin-left: 2vw;
+    gap: 5px;
+    align-items: center;
+    font-weight: 900;
+    font-size: 12px;
+}
+
+main .leftportion .language-btn img {
+    width: 15px;
+    filter: invert(100%);
+}
+
+main .rightportion {
+    margin-left: 28%;
+    width: 72%;
+    height: calc(100vh - 12vh);
+    border-radius: 5px;
+    background-color: #121212;
+    overflow-y: auto;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+main .rightportion::-webkit-scrollbar {
+    width: 8px;
+}
+
+main .rightportion::-webkit-scrollbar-thumb {
+    background-color: gray;
+    border-radius: 10px;
+}
+
+main .rightportion .cards .segments {
+    padding: 2vh 1.5vw;
+    margin-bottom: 0;
+}
+
+main .rightportion .cards .segments .title {
+    margin-top: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+main .rightportion .cards .segments .title h1 {
+    margin: 0;
+}
+
+main .rightportion .cards .segments .title a {
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    color: #c9c6c6;
+}
+
+main .rightportion .cards .segments .title a:hover {
+    filter: brightness(150%);
+}
+
+main .rightportion .cards .segments .RoundElements {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 2vh;
+}
+
+main .rightportion .cards .segments .RoundElements .Round {
+    padding: 5px;
+    width: 16%;
+    height: 220px;
+    padding-top: 10px;
+    border-radius: 5px;
+}
+
+main .rightportion .cards .segments .RoundElements .Round:hover {
+    cursor: pointer;
+    background-color: #2626265e;
+}
+
+main .rightportion .cards .segments .RoundElements .Round .thubmnail {
+    width: 95%;
+    height: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .rightportion .cards .segments .RoundElements .Round .thubmnail img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: fill;
+}
+
+main .rightportion .cards .segments .RoundElements .Round .discription {
+    margin-top: 8px;
+}
+
+main .rightportion .cards .segments .RoundElements .Round .discription .first {
+    margin: 5px 5px;
+    font-size: 15px;
+    font-weight: 600;
+    white-space: nowrap;
+    /* Prevent line break */
+    overflow: hidden;
+    /* Hide overflow */
+    text-overflow: ellipsis;
+
+}
+
+main .rightportion .cards .segments .RoundElements .Round .discription p {
+    margin: 5px 5px;
+    font-size: 14px;
+    font-weight: 400;
+    white-space: nowrap;
+    /* Prevent line break */
+    overflow: hidden;
+    /* Hide overflow */
+    text-overflow: ellipsis;
+}
+
+main .rightportion .cards .segments .SquareElements {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 2vh;
+}
+
+main .rightportion .cards .segments .SquareElements .square {
+    padding: 5px;
+    width: 15%;
+    height: 240px;
+    padding-top: 10px;
+    border-radius: 5px;
+}
+
+main .rightportion .cards .segments .SquareElements .square:hover {
+    cursor: pointer;
+    background-color: #2626265e;
+}
+
+main .rightportion .cards .segments .SquareElements .square .thubmnail {
+    width: 97%;
+    height: 65%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .rightportion .cards .segments .SquareElements .square .thubmnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    border-radius: 10px;
+}
+
+main .rightportion .cards .segments .SquareElements .square .discription {
+    margin-top: 8px;
+}
+
+main .rightportion .cards .segments .SquareElements .square .discription .first {
+    font-weight: 700;
+    word-wrap: break-word;
+    font-size: 15px;
+    white-space: nowrap;
+    /* Prevent line break */
+    overflow: hidden;
+    /* Hide overflow */
+    text-overflow: ellipsis;
+}
+
+main .rightportion .cards .segments .SquareElements .square .discription p {
+    margin: 5px 5px;
+    font-size: 14px;
+    font-weight: 400;
+    white-space: nowrap;
+    /* Prevent line break */
+    overflow: hidden;
+    /* Hide overflow */
+    text-overflow: ellipsis;
+}
+
+
+main .rightportion .footer {
+    padding-bottom: 10vh;
+}
+
+main .rightportion .footer .footlinks {
+    border-bottom: 1px solid rgba(159, 155, 155, 0.406);
+    display: flex;
+    flex-wrap: wrap;
+    width: 95%;
+    margin-top: 10vh;
+    padding-bottom: 4vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+main .rightportion .footer .footlinks .foot {
+    width: 18%;
+}
+
+main .rightportion .footer .footlinks .foot h3 {
+    font-weight: bold;
+    margin: 0;
+}
+
+main .rightportion .footer .footlinks .foot li {
+    list-style: none;
+    margin: 0;
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+main .rightportion .footer .footlinks .foot li a {
+    text-decoration: none;
+    color: #727272;
+}
+
+main .rightportion .footer .footlinks .foot li:hover {
+    filter: brightness(200%);
+    text-decoration: underline 1px white;
+}
+
+main .rightportion .footer .footlinks .element5 {
+    display: flex;
+    margin-left: auto;
+    justify-content: space-evenly;
+}
+
+main .rightportion .footer .footlinks .element5 a {
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #313030;
+}
+
+main .rightportion footer .footlinks .element5 a:hover {
+    filter: brightness(150%);
+}
+
+main .rightportion .footer .footlinks .element5 a img {
+    width: 20px;
+    filter: invert(100%);
+}
+
+main .rightportion .footer .copyright {
+    margin-left: 2vw;
+    margin-top: 4vh;
+}

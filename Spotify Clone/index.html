@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="utility.css">
+    <link rel="shortcut icon" href="Images/favicon.png" type="image/x-icon">
+    <title>Spotify - Web Player: Music for everyone</title>
+</head>
+
+<body>
+    <nav>
+        <div class="navleft">
+            <div class="hmlogo">
+                <img src="Images/logo.png" width="45px" alt="">
+                <button><img src="Images/Home.png" alt=""></button>
+            </div>
+            <div class="srch">
+                <img id="search" src="Images/search.png" alt="">
+                <input type="text" placeholder="What do You want to play?">
+                <img id="folder" src="Images/Folder icon.png" width="30px" alt="">
+            </div>
+        </div>
+        <div class="navright">
+            <div class="opts">
+                <a href="">Premium</a>
+                <a href="">Support</a>
+                <a href="">Download</a>
+            </div>
+            <div class="log">
+                <button id="install"><img src="Images/download icon.png" alt="">Install App </button>
+                <a id="sign" href="">Sign Up</a>
+                <button id="log">Log in</button>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <div class="playbar">
+            <div class="trackinfo">
+                Nothing Is Playing
+            </div>
+            <div class="controls-progress">
+                <div class="progress flex pointer ">
+                    <div class="width"></div>
+                    <div class="circle"></div>
+                </div>
+                <div class="controls pointer invert ">
+                    <img id="previous" src="Images/prevsong.svg" alt="">
+                    <img id="play" src="Images/play.svg" alt="">
+                    <!-- <img src="Images/pause.svg" alt=""> -->
+                    <img id="next" src="Images/nextsong.svg" alt="">
+                </div>
+            </div>
+            <div class="songtime invert">
+
+            </div>
+            <div class="volm-progress">
+                <div class="img"><img class="" src="Images/volume.svg" alt=""></div>
+                <div class="volm flex">
+                    <input type="range" id="range">
+                </div>
+            </div>
+
+        </div>
+        <div class="portions">
+            <div class="leftportion">
+                <div class="heading">
+                    <span id="icon"><img src="Images/library.png" alt=""> Your Library</span>
+                    <button>+</button>
+                </div>
+                <div class="sidebar-content">
+                    <div class="songlist">
+                        <li>
+                            <!-- <div class="songinfo">
+                            <img class="invert" src="Images/music.png" width="10px" alt="">
+                            <div class="info">
+                                <p>Song Name</p>
+                                <p>Singer</p>
+                            </div>
+                        </div>
+                        <div class="playnow">
+                            <img class="invert" src="Images/play.png" width="15px" alt="">
+                        </div> -->
+                        </li>
+                    </div>
+                    <!-- <div class="box">
+                        <h3>Create your first playlist</h3>
+                        <p>It's easy, we'll help you</p>
+                        <button class="btn">Create playlist</button>
+                    </div>
+
+                    <div class="box">
+                        <h3>Let's find some podcasts to follow</h3>
+                        <p>We'll keep you updated on new episodes</p>
+                        <button class="btn">Browse podcasts</button>
+                    </div> -->
+                </div>
+                <div class="footer">
+                    <div class="sidebar-footer">
+                        <a href="#">Legal</a>
+                        <a href="#">Saftey&privacy Center</a>
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Cookies</a>
+                        <a href="#">About Ads</a>
+                        <a href="#">Accesibility</a>
+
+                    </div>
+                    <button class="language-btn"><img src="Images/world.png" alt=""> English</button>
+                </div>
+            </div>
+
+            <div class="rightportion">
+                <div class="cards">
+                    <div class="segments segment1">
+                        <div class="title">
+                            <h3>Artist</h3>
+                            <a href="">Show all</a>
+                        </div>
+                        <div class="RoundElements">
+                            <div class="Round element1">
+                                <div class="thubmnail"><img src="Images/1.jpg" alt=""></div>
+                                <div class="discription">
+                                    <p class="first">Pritam</p>
+                                    <p>Artist</p>
+                                </div>
+                            </div>
+                            <div class="Round element2">
+                                <div class="thubmnail">
+                                    <img src="Images/2.jpg" alt="">
+                                </div>
+                                <div class="discription">
+                                    <p class="first">Arijit</p>
+                                    <p>Artist</p>
+                                </div>
+                            </div>
+                            <div class="Round element3">
+                                <div class="thubmnail"><img src="Images/3.jpg" alt=""></div>
+                                <div class="discription">
+                                    <p class="first">A.R.Rahman</p>
+                                    <p>Artist</p>
+                                </div>
+                            </div>
+                            <div class="Round element4">
+                                <div class="thubmnail"><img src="Images/4.jpg" alt=""></div>
+                                <div class="discription">
+                                    <p class="first">Sachin-Jigar</p>
+                                    <p>Artist</p>
+                                </div>
+                            </div>
+                            <div class="Round element5">
+                                <div class="thubmnail"><img src="Images/5.jpg" alt=""></div>
+                                <div class="discription">
+                                    <p class="first">Vishal-Shekar</p>
+                                    <p>Artist</p>
+                                </div>
+                            </div>
+                            <div class="Round element6">
+                                <div class="thubmnail"><img src="Images/6.jpg" alt=""></div>
+                                <div class="discription">
+                                    <p class="first">Atif Aslam</p>
+                                    <p>Artist</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="segments segment2">
+                        <div class="title">
+                            <h3>Popular Albums And Singles</h3>
+                            <a href="">Show all</a>
+                        </div>
+                        <div class="SquareElements">
+                            <div class="square element1">
+                                <div class="thubmnail">
+                                    <img src="Images/s1.jpg" alt="">
+                                </div>
+                                <div class="discription">
+                                    <p class="first">Sanam Teri kasam</p>
+                                    <p>Himesh Reshammiya,sammer Anjaan ,Subrata</p>
+                                </div>
+                            </div>
+
+                            <div class="square element2">
+                                <div class="thubmnail">
+                                    <img src="Images/s2.jpg" alt="">
+                                </div>
+                                <div class="discription">
+                                    <p class="first">Aashiqui 2</p>
+                                    <p>Mithoon,Ankit Tiwari,Jeet Ganguli</p>
+                                </div>
+                            </div>
+                            <div class="square element3">
+                                <div class="thubmnail"><img src="Images/s3.jpg" alt=""></div>
+                                <div class="discription">
+                                    <p class="first">Glory</p>
+                                    <p>Yo Yo Honey singh</p>
+                                </div>
+                            </div>
+                            <div class="square element4">
+                                <div class="thubmnail"><img src="Images/s4.jpg" alt=""></div>
+                                <div class="discription">
+                                    <p class="first">Yeh Jawani Hai Deewani</p>
+                                    <p>Pritam</p>
+                                </div>
+                            </div>
+                            <div class="square element5">
+                                <div class="thubmnail"><img src="Images/s5.jpg" alt=""></div>
+                                <div class="discription">
+                                    <p class="first">Who(Remixes)</p>
+                                    <p>Jimin</p>
+                                </div>
+                            </div>
+                            <div class="square element6">
+                                <div class="thubmnail"><img src="Images/s6.jpg" alt=""></div>
+                                <div class="discription">
+                                    <p class="first">Mismatched-Season 3(Soundtarck from the Netflix)</p>
+                                    <p>Mismatched-Cast</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="segments segment3">
+                        <div class="title">
+                            <h3>header</h3>
+                            <a href="">Show all</a>
+                        </div>
+                        <div class="SquareElements">
+                            <div class="square element1">
+                                <div class="thubmnail">
+                                    <img src="Images/test2.jpg" alt="">
+                                </div>
+                                <div class="discription">
+                                    <p class="first">heading</p>
+                                    <p>para</p>
+                                </div>
+                            </div>
+
+                            <div class="square element2">
+                                <div class="thubmnail">
+                                    <img src="" alt="">
+                                </div>
+                                <div class="discription">
+                                    <p class="first">heading</p>
+                                    <p>para</p>
+                                </div>
+                            </div>
+                            <div class="square element3">
+                                <div class="thubmnail"><img src="" alt=""></div>
+                                <div class="discription">
+                                    <p class="first">heading</p>
+                                    <p>para</p>
+                                </div>
+                            </div>
+                            <div class="square element4">
+                                <div class="thubmnail"><img src="" alt=""></div>
+                                <div class="discription">
+                                    <p class="first">heading</p>
+                                    <p>para</p>
+                                </div>
+                            </div>
+                            <div class="square element5">
+                                <div class="thubmnail"><img src="" alt=""></div>
+                                <div class="discription">
+                                    <p class="first">heading</p>
+                                    <p>para</p>
+                                </div>
+                            </div>
+                            <div class="square element6">
+                                <div class="thubmnail"><img src="" alt=""></div>
+                                <div class="discription">
+                                    <p class="first">heading</p>
+                                    <p>para</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                    <div class="segments segment4">
+                        <div class="title">
+                            <h3>header</h3>
+                            <a href="">Show all</a>
+                        </div>
+                        <div class="SquareElements">
+                            <div class="square element1">
+                                <div class="thubmnail">
+                                    <img src="Images/test2.jpg" alt="">
+                                </div>
+                                <div class="discription">
+                                    <p class="first">heading</p>
+                                    <p>para</p>
+                                </div>
+                            </div>
+
+                            <div class="square element2">
+                                <div class="thubmnail">
+                                    <img src="" alt="">
+                                </div>
+                                <div class="discription">
+                                    <p class="first">heading</p>
+                                    <p>para</p>
+                                </div>
+                            </div>
+                            <div class="square element3">
+                                <div class="thubmnail"><img src="" alt=""></div>
+                                <div class="discription">
+                                    <p class="first">heading</p>
+                                    <p>para</p>
+                                </div>
+                            </div>
+                            <div class="square element4">
+                                <div class="thubmnail"><img src="" alt=""></div>
+                                <div class="discription">
+                                    <p class="first">heading</p>
+                                    <p>para</p>
+                                </div>
+                            </div>
+                            <div class="square element5">
+                                <div class="thubmnail"><img src="" alt=""></div>
+                                <div class="discription">
+                                    <p class="first">heading</p>
+                                    <p>para</p>
+                                </div>
+                            </div>
+                            <div class="square element6">
+                                <div class="thubmnail"><img src="" alt=""></div>
+                                <div class="discription">
+                                    <p class="first">heading</p>
+                                    <p>para</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="segments segment5">
+                        <div class="title">
+                            <h3>header</h3>
+                            <a href="">Show all</a>
+                        </div>
+                        <div class="SquareElements">
+                            <div class="square element1">
+                                <div class="thubmnail">
+                                    <img src="Images/test2.jpg" alt="">
+                                </div>
+                                <div class="discription">
+                                    <p class="first">heading</p>
+                                    <p>para</p>
+                                </div>
+                            </div>
+
+                            <div class="square element2">
+                                <div class="thubmnail">
+                                    <img src="" alt="">
+                                </div>
+                                <div class="discription">
+                                    <p class="first">heading</p>
+                                    <p>para</p>
+                                </div>
+                            </div>
+                            <div class="square element3">
+                                <div class="thubmnail"><img src="" alt=""></div>
+                                <div class="discription">
+                                    <p class="first">heading</p>
+                                    <p>para</p>
+                                </div>
+                            </div>
+                            <div class="square element4">
+                                <div class="thubmnail"><img src="" alt=""></div>
+                                <div class="discription">
+                                    <p class="first">heading</p>
+                                    <p>para</p>
+                                </div>
+                            </div>
+                            <div class="square element5">
+                                <div class="thubmnail"><img src="" alt=""></div>
+                                <div class="discription">
+                                    <p class="first">heading</p>
+                                    <p>para</p>
+                                </div>
+                            </div>
+                            <div class="square element6">
+                                <div class="thubmnail"><img src="" alt=""></div>
+                                <div class="discription">
+                                    <p class="first">heading</p>
+                                    <p>para</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+                <div class="footer">
+                    <div class="footlinks">
+                        <div class="foot element1">
+                            <h3>Company</h3>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Jobs</a></li>
+                            <li><a href="#">For the Record</a></li>
+                        </div>
+                        <div class="foot element2">
+                            <h3>Communities</h3>
+                            <li><a href="#">For Artist</a></li>
+                            <li><a href="#">Developers</a></li>
+                            <li><a href="#">Advertising</a></li>
+                            <li><a href="#">Investors</a></li>
+                            <li><a href="#">Vendors</a></li>
+                        </div>
+                        <div class="foot element3">
+                            <h3>Useful links</h3>
+                            <li><a href="#">Support</a></li>
+                            <li><a href="#">Free Mobile App</a></li>
+                        </div>
+                        <div class="foot element4">
+                            <h3>Spotify plans</h3>
+                            <li><a href="#">Premium individual</a></li>
+                            <li><a href="#">Premium Duo</a></li>
+                            <li><a href="#">Premium Family</a></li>
+                            <li><a href="#">Premium Student</a></li>
+                            <li><a href="#">Spotify Free</a></li>
+                        </div>
+                        <div class="foot element5">
+                            <li><a href="https://www.instagram.com/spotify/" target="_blank"><img src="Images/insta.png"
+                                        alt=""></a>
+                            </li>
+                            <li><a href="https://x.com/spotify"><img src="Images/Twitter.png" target="_blank"
+                                        alt=""></a></li>
+                            <li><a href="https://www.facebook.com/Spotify"><img src="Images/facebook.png"
+                                        target="_blank" alt=""></a>
+                            </li>
+                        </div>
+                    </div>
+                    <div class="copyright">&copy2025 Spotify AB</div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>

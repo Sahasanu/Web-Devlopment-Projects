@@ -1,0 +1,12 @@
+.invert{
+    filter: invert(100%);
+}
+.flex{
+    display: flex;
+}
+.glow{
+    filter: brightness(150%);
+}
+.pointer{
+    cursor: pointer;
+}
