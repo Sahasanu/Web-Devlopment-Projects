@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(45deg, #8ba3df, #01040a);
+}
+
+
+.container {
+    width: 20%;
+    height: 50%;
+    border: 2px solid rgb(243, 198, 198);
+    padding: 10px;
+    border-radius: 10px ;
+    /* background: linear-gradient(45deg, #f5e7aa, #4982f6); */
+    background: rgb(248, 241, 241);
+    
+}
+
+.container .heading {
+    font-weight: 900;
+    font-size: 18px;
+}
+
+.display {
+    width: 100%;
+    height: 10%;
+    margin-top: 10px;
+    display: flex;
+    border: 1px solid rgba(131, 131, 138, 0.756);
+    border-radius: 5px;
+    gap: 5px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.display .pass {
+    width: 80%;
+    height: 100%;
+   padding-top: 5px;
+
+}
+
+.display img {
+    width: 15px;
+    cursor: pointer;
+}
+
+.Customization {
+    /* border: 2px solid blue; */
+    margin-top: 10px;
+    height: 50%;
+    padding: 5px;
+}
+
+
+input[type="range"] {
+    width: 100%;
+    height: 5px;
+    border-radius: 5px;
+    outline: none;
+    transition: opacity .2s;
+}
+.passl{
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tickbox {
+    display: flex;
+    /* border: 2px solid red; */
+    flex-direction: column;
+
+}
+
+.tickbox li {
+    list-style: none;
+    height: 20%;
+    /* border: 2px solid red; */
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+
+}
+.btn{
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.btn button{
+  width: 70%;
+height: 5vh;
+border-radius: 10px;
+background-color: #4e79e3;
+font-weight: 600;
+font-size: 15px;
+border: none;
+
+
+}
