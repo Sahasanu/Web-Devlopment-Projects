@@ -7,9 +7,9 @@ let btnarr = Array.from(buttons);
 
 btnarr.forEach(button => {
     button.addEventListener("click", (e) => {
-        let input = e.target.innerHTML
+        let inp = e.target.innerHTML
 
-        switch (input) {
+        switch (inp) {
             case "=":
                 string = string.replace(/×/g, "*").replace(/÷/g, "/");
                 string = eval(string)
