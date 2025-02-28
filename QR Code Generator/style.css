@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(#e66465, #9198e5);
+}
+
+.container {
+    width: 25%;
+    height: auto;
+    border: 2px solid rgb(245, 243, 243);
+    border-radius: 10px;
+    padding: 5px;
+    background-color: #4a56e0c5;
+}
+
+.container .heading {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+    margin: 5px;
+}
+
+.container .input {
+    height: 20%;
+    padding: 5px;
+}
+
+.container .input .txtinput input {
+    width: 100%;
+    height: 5vh;
+    border: none;
+    border-radius: 3px;
+    padding: 5px;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.container .input .txtinput input::placeholder {
+    font-size: 15px;
+}
+
+.container .input .sizeinput {
+    margin-top: 10px;
+}
+
+.container .input .sizeinput label {
+    font-size: 20px;
+    font-weight: 500;
+    color: white;
+}
+
+.container .input .sizeinput select {
+    width: 7vw;
+    padding: 5px;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 4px;
+    margin-left: 5vw;
+}
+
+.container .qr {
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.container .qr img {
+    max-width: 100%;
+    height: 100%;
+    border: 3px solid rgba(163, 160, 160, 0.571);
+    border-radius: 5px;
+}
+
+.container .btns {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    width: 100%;
+    gap: 5px;
+
+}
+
+.container .btns button {
+    width: 50%;
+    height: 5vh;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 4px;
+    border: none;
+    color: white;
+    background-color: #fe6b6b;
+}
+
+.container .btns button:hover {
+    background-color: #fe6b6bdd;
+    cursor: pointer;
+}
+
+.container .btns a {
+    width: 50%;
+    height: 5vh;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 4px;
+    border: none;
+    color: white;
+    background-color: #fe6b6b;
+    text-align: center;
+}
