@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fixed Sidebars & Scrollable Center</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-black text-white flex justify-center">
+
+    <!-- Outer Wrapper (Centering everything) -->
+    <div class="w-[80rem] flex h-screen">
+
+        <!-- Left Sidebar (Fixed) -->
+        <div class="w-64 h-screen fixed left-0 top-0 bg-gray-900 p-4">
+            <h2 class="text-xl font-bold">Left Sidebar</h2>
+            <ul class="mt-4 space-y-2">
+                <li>Home</li>
+                <li>Explore</li>
+                <li>Notifications</li>
+                <li>Messages</li>
+            </ul>
+        </div>
+
+        <!-- Middle Section (Non-Stretched, Scrollable) -->
+        <div class="flex-1 flex justify-center">
+            <div class="w-[50rem] overflow-y-auto h-screen p-4">
+                <h2 class="text-xl font-bold mb-4">Main Content</h2>
+                <div class="space-y-4">
+                    <div class="bg-gray-800 p-4 rounded-lg">Post 1</div>
+                    <div class="bg-gray-800 p-4 rounded-lg">Post 2</div>
+                    <div class="bg-gray-800 p-4 rounded-lg">Post 3</div>
+                    <div class="bg-gray-800 p-4 rounded-lg">Post 4</div>
+                    <div class="bg-gray-800 p-4 rounded-lg">Post 5</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Sidebar (Fixed) -->
+        <div class="w-64 h-screen fixed right-0 top-0 bg-gray-900 p-4">
+            <h2 class="text-xl font-bold">Right Sidebar</h2>
+            <p class="mt-4">Trending Topics</p>
+            <ul class="mt-2 space-y-2">
+                <li>#Topic1</li>
+                <li>#Topic2</li>
+                <li>#Topic3</li>
+            </ul>
+        </div>
+
+    </div>
+
+</body>
+</html>
